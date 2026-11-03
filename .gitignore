@@ -1,0 +1,12 @@
+.gradle/
+.idea/
+local.properties
+**/build/
+*.iml
+*.apk
+*.aab
+*.jks
+*.keystore
+app/src/main/jniLibs/
+app/src/main/assets/bootstrap/*.dex
+app/libs/*.jar

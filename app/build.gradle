@@ -1,0 +1,21 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.pisunclient'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.pisunclient'
+        minSdk 21
+        targetSdk 28
+        versionCode 7
+        versionName '0.7.0'
+        ndk { abiFilters 'armeabi-v7a' }
+        externalNativeBuild { cmake { cppFlags '-std=c++17 -fexceptions -frtti' } }
+    }
+    externalNativeBuild { cmake { path 'src/main/cpp/CMakeLists.txt'; version '3.22.1' } }
+    packaging { jniLibs { useLegacyPackaging true } }
+}
+
+dependencies {
+    compileOnly files('libs/minecraft-api-stubs.jar')
+}

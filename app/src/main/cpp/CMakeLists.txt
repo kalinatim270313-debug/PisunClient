@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(pisunclient LANGUAGES CXX)
+add_library(pisun SHARED pisun.cpp)
+find_library(log-lib log)
+find_library(dl-lib dl)
+target_compile_features(pisun PRIVATE cxx_std_17)
+target_compile_options(pisun PRIVATE -Wall -Wextra -fvisibility=hidden)
+target_link_libraries(pisun ${log-lib} ${dl-lib} android)

@@ -1,0 +1,9 @@
+PisunClient 0.7.0 — исходники
+
+Требуются Android Studio, Android SDK 35, Android NDK, CMake 3.22.1 и Python 3.
+
+Внешние зависимости (Minecraft PE/Variable DEX и native libraries) не входят в репозиторий. Добавляйте только файлы, которыми имеете право пользоваться.
+
+Целевая ABI: armeabi-v7a. Откройте проект в Android Studio и выполните :app:assembleDebug после добавления внешних зависимостей.
+
+APK в этой среде не собирался; hook не тестировался на устройстве.
